@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaundryPro | Premium Laundry Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("fST4RYCyKSHcz3slz"); 
+        })();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Laundry<span>Pro</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="user-badge">Username</div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Revitalize Your Clothes with Expert <span>Laundry Services!</span></h1>
+            <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup today!</p>
+            <button class="cta-primary" onclick="document.getElementById('services').scrollIntoView()">Book a service today!</button>
+        </div>
+        <div class="hero-img">
+            <img src="img.png" alt="Laundry Machine">
+        </div>
+    </header>
+
+    <section class="achievements">
+        <div class="achieve-box">
+            <div class="achieve-title">Our Achievements</div>
+            <div class="stats-grid">
+                <div class="stat"><h2>15+</h2><p>Laundry Services</p></div>
+                <div class="stat"><h2>240+</h2><p>Happy Customers</p></div>
+                <div class="stat"><h2>2+ Yrs</h2><p>Experience</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="booking-section">
+        <div class="section-container">
+            <div class="service-menu">
+                <div class="menu-header">
+                    <h2>Our Services</h2>
+                    <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+                </div>
+                <div class="service-grid">
+                    <div class="s-card"><span>👕 Dry Cleaning - ₹200.00</span><button onclick="addToCart('Dry Cleaning', 200)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>🧺 Wash & Fold - ₹100.00</span><button onclick="addToCart('Wash & Fold', 100)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>💨 Ironing - ₹30.00</span><button onclick="addToCart('Ironing', 30)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>✨ Stain Removal - ₹500.00</span><button onclick="addToCart('Stain Removal', 500)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>💼 Leather Cleaning - ₹999.00</span><button onclick="addToCart('Leather Cleaning', 999)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                </div>
+            </div>
+
+            <div class="checkout-panel">
+                <div class="cart-box">
+                    <h3>Added Items</h3>
+                    <div id="cart-list" class="cart-scroll"><p class="empty-txt">Add items to start booking</p></div>
+                    <div class="total-bar">Total Amount: <span id="total-price">₹ 0.00</span></div>
+                </div>
+
+                <div class="form-box">
+                    <h3>Book Now</h3>
+                    <input type="text" id="fullname" placeholder="Full Name">
+                    <div class="dual-input">
+                        <input type="email" id="email" placeholder="Email ID">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                    </div>
+                    <button class="btn-confirm" onclick="sendEmail()">Book now</button>
+                    <p id="success-msg" class="success-alert">Booking Success! Check your email.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="news-content">
+            <h2>Subscribe to our newsletter</h2>
+            <div class="news-form">
+                <input type="text" placeholder="Full name">
+                <input type="email" placeholder="Email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="f-info"><h2>Laundry<span>Pro</span></h2><p>Premium care for your garments. We use eco-friendly products for a better wash.</p></div>
+            <div class="f-links"><h4>Important Links</h4><a href="#">About us</a><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+            <div class="f-contact"><h4>Contact</h4><p>suryavanshivaibhav2@gmai.com</p><p>+91 75071 21980</p></div>
+            <div class="f-social"><h4>Follow Us</h4><div class="icons"><i class="fab fa-instagram"></i><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i></div></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
