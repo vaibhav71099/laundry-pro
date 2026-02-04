@@ -56,11 +56,10 @@
                     <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
                 </div>
                 <div class="service-grid">
-                    <div class="s-card"><span>👕 Dry Cleaning - ₹200.00</span><button onclick="addToCart('Dry Cleaning', 200)">Add Item <i class="fas fa-plus-circle"></i></button></div>
-                    <div class="s-card"><span>🧺 Wash & Fold - ₹100.00</span><button onclick="addToCart('Wash & Fold', 100)">Add Item <i class="fas fa-plus-circle"></i></button></div>
-                    <div class="s-card"><span>💨 Ironing - ₹30.00</span><button onclick="addToCart('Ironing', 30)">Add Item <i class="fas fa-plus-circle"></i></button></div>
-                    <div class="s-card"><span>✨ Stain Removal - ₹500.00</span><button onclick="addToCart('Stain Removal', 500)">Add Item <i class="fas fa-plus-circle"></i></button></div>
-                    <div class="s-card"><span>💼 Leather Cleaning - ₹999.00</span><button onclick="addToCart('Leather Cleaning', 999)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>👕 Dry Cleaning - ₹200.00</span><button id="btn-DryCleaning" onclick="toggleCart('Dry Cleaning', 200)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>💨 Ironing - ₹30.00</span><button id="btn-Ironing" onclick="toggleCart('Ironing', 30)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>✨ Stain Removal - ₹500.00</span><button id="btn-StainRemoval" onclick="toggleCart('Stain Removal', 500)">Add Item <i class="fas fa-plus-circle"></i></button></div>
+                    <div class="s-card"><span>💼 Leather Cleaning - ₹999.00</span><button id="btn-LeatherCleaning" onclick="toggleCart('Leather Cleaning', 999)">Add Item <i class="fas fa-plus-circle"></i></button></div>
                 </div>
             </div>
 
@@ -81,17 +80,6 @@
                     <button class="btn-confirm" onclick="sendEmail()">Book now</button>
                     <p id="success-msg" class="success-alert">Booking Success! Check your email.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="newsletter">
-        <div class="news-content">
-            <h2>Subscribe to our newsletter</h2>
-            <div class="news-form">
-                <input type="text" placeholder="Full name">
-                <input type="email" placeholder="Email">
-                <button>Subscribe</button>
             </div>
         </div>
     </section>
